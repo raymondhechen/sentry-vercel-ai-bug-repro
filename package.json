@@ -1,0 +1,28 @@
+{
+  "name": "sentry-repro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch --import ./src/instrument.ts src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.10.0",
+  "dependencies": {
+    "@ai-sdk/amazon-bedrock": "^3.0.22",
+    "@ai-sdk/anthropic": "^2.0.17",
+    "@sentry/node": "^10.12.0",
+    "ai": "5.0.44",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "tsx": "^4.20.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.5.2"
+  }
+}
