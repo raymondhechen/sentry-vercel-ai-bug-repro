@@ -11,6 +11,7 @@ export class Agent {
   }
 
   async generate(id: string) {
+    // capture abort signal early for when abort() is called and replaces this.abortController with a new one
     const abortSignal = this.abortController.signal
 
     abortSignal.onabort = () => {
