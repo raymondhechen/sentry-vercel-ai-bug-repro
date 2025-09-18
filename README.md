@@ -1,8 +1,10 @@
 # Repro for abort console error with @sentry/node and vercel/ai
 
-- Add `SENTRY_DSN` and `ANTHROPIC_API_KEY` to env vars
+- Add `SENTRY_DSN` and `ANTHROPIC_API_KEY` to `.env`
+- `pnpm install` to install deps
 - Start server with `pnpm run dev`
   - Note that this command also imports sentry instrumentation (`instrument.ts`)
+- Hit repro endpoint by going to `http://localhost:8081`
 
 ### Console Log
 
