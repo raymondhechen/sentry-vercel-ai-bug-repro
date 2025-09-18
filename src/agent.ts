@@ -1,6 +1,5 @@
 import { bedrock } from '@ai-sdk/amazon-bedrock'
 import { streamText } from 'ai'
-import 'dotenv/config'
 
 export class Agent {
   abortController = new AbortController()
