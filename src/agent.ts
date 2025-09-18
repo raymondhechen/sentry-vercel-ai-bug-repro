@@ -1,4 +1,4 @@
-import { bedrock } from '@ai-sdk/amazon-bedrock'
+import { anthropic } from '@ai-sdk/anthropic'
 import { streamText } from 'ai'
 
 export class Agent {
@@ -20,7 +20,7 @@ export class Agent {
     console.log(`Generating ${id}`)
 
     const res = streamText({
-      model: bedrock('us.anthropic.claude-sonnet-4-20250514-v1:0'),
+      model: anthropic('claude-sonnet-4-20250514'),
       tools: {},
       messages: [{ role: 'user', content: 'Write a long poem.' }],
       abortSignal,
