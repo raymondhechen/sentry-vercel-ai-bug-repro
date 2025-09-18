@@ -24,17 +24,10 @@ export class Agent {
       tools: {},
       messages: [{ role: 'user', content: 'Write a long poem.' }],
       abortSignal,
-      onAbort: () => {
-        console.log('AI SDK Abort signal aborted', id)
-      },
       onError: (error) => {
         console.log(error)
       },
     })
-
-    for await (const chunk of res.textStream) {
-      console.log(chunk)
-    }
   }
 }
 
